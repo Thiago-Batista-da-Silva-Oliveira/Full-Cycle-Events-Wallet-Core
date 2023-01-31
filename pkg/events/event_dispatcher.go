@@ -20,6 +20,7 @@ func (ev *EventDispatcher) Dispatch(event EventInterface) error {
 			handler.Handle(event)
 		}
 	}
+	return nil
 }
 
 func (ed *EventDispatcher) Register(eventName string, handler EventHandlerInterface) error {
